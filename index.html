@@ -5,20 +5,72 @@
 	<meta charset="utf-8">
 	<title>Hang-Man</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="assets/javascript/javascript.js"></script>
+	
+	<script  src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="assets/javascript/javascript.js"></script>  
+
 	</head>
 
 <body>
 
-	<h1>The Hang-Man game is here!!!</h1>
+	<h1>The Hang-Man game is here!!!</h1> 
+	<h3>Guess the next US cityyy!</h3>
+	<h4>Press any key to start</h4>  
 
-	<script>
+	<h1 id="demo">Aqui</h1>
+
+
+
+
+<!--
+	<script type="text/javascript">
+document.onkeyup = function() {
+		//Definition of the array of cities of USA
 		var capitals = ["Austin", "Albany", "Phoenix", "Juneau", "Sacramento", "Helena", "Trenton", "Lincoln"];
+		
+	//Randomly selection of cities in array of capitals
+
+		//Random number for the length of the array 
 		var i = Math.floor(Math.random()*capitals.length);
-		console.log(i);
-		console.log(capitals[i]);
-		document.write("Gues the US city: " + capitals[i]);
-	</script>
+		console.log("The city in the array is the #: " + i);
+		
+		function guessCity() {
+//			document.write("Guess the US city: " + capitals[i]);
+			var city = capitals[i];
+			for ( j = 0 ; j < city.length; j++ ) {
+				//Here assign every letter of the city to a variable
+				var newvar = city.charAt(j);
+				var res = $("<p>");
+				res.text(newvar);
+			   	$("#demo").append(res);
+			   	//Here, write an underline _ for every letter of the city.
+				document.write(" _ ");
+				console.log(newvar);
+			}
+			
+		}
+
+//		document.write("(La palabra " + city + " tiene " + j + " letras.)");
+//		console.log(city);
+//		console.log(city.length);
+
+		//reading the city from the array one letter at the time
+		function myFunction() {
+		   	for (var l = 0; l < city.length; l++ ) {
+		   		var newvar = city.charAt(l);
+				var res = $("<p>"); 
+		   		res.text(newvar);
+		   		console.log(newvar);
+		   		$("#demo").append(newvar);
+
+			}
+		}
+		guessCity();
+}
+	</script>     
+-->
+
 
 </body>
 </html>

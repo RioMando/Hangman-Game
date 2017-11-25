@@ -17,7 +17,7 @@ $(function(){
   var cityToGuess = [];
   var countWin = 0;
   var count = 0;
-  var gessLft = 9;
+  var gessLft = 8;
   //Randomly selection of cities in array of capitals
 
   function updateScore() {
@@ -26,14 +26,14 @@ $(function(){
     var newWin = $("<h3>");
     $("#wins").append(" " + countWin);
     console.log("Win: " + countWin);
-  }
+  }//End updateScore()
 
   function updateGuess(){
     $("#guessLft").empty();
     var nwGss = gessLft.toString();
     var nwGss = $("<h3>");
     $("#guessLft").append(" " + gessLft);
-  }
+  }//End updateGuess
 
   function initCity() {
     i = Math.floor(Math.random()*capitals.length);
@@ -53,11 +53,6 @@ $(function(){
       $("#citGss").append(cityToGuess[j] + " ");
     }//End for-loop
   }//End displayCity()
-
-/*  function displayPic() {
-    $("citGss").empty();
-    $("#citGss").append("src=assets/images/austin.jpg");	
-  }*/
 
   function guessLetter() {
     var z=0;
@@ -81,12 +76,12 @@ $(function(){
     
     function resetSettings(){
       $("#yourG").empty();
-      gessLft=9;
+      gessLft=8;
       updateScore();
       count = 0;
       initCity();
       updateGuess();
-    }
+    }//End resetSettings()
     if (count===city.length) {
       countWin++;
       resetSettings()
@@ -94,12 +89,8 @@ $(function(){
     if (gessLft===0) {
     	resetSettings();
     }
-
     $("#citGss").empty();
     displayCity();
-    if (gessLft===0){
-
-    }
   }//End guessLetter() 
 
   document.onkeyup = function(event) {
@@ -113,5 +104,4 @@ updateScore();
 updateGuess();
 initCity();
 
-
-}); // end ready
+}); // end ready -for JQuery-

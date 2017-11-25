@@ -15,68 +15,12 @@
 <body>
 
 	<h1>The Hang-Man game is here!!!</h1> 
-	<h3>Guess the next US city!</h3>
 	<h4>Press any key to start</h4>  
-
+    <h3 id="wins">Wins: </h3>
+    <h3>Guess the next US city!</h3>
 	<h3><span><h1 id="citGss"></h1></span></h3>
-
-	<h3>Your Guesses so far: <span><h1 id="yourG"></h1></span></h3>
-
-
-
-
-
-
-
-
-<!--
-	<script type="text/javascript">
-document.onkeyup = function() {
-		//Definition of the array of cities of USA
-		var capitals = ["Austin", "Albany", "Phoenix", "Juneau", "Sacramento", "Helena", "Trenton", "Lincoln"];
-		
-	//Randomly selection of cities in array of capitals
-
-		//Random number for the length of the array 
-		var i = Math.floor(Math.random()*capitals.length);
-		console.log("The city in the array is the #: " + i);
-		
-		function guessCity() {
-//			document.write("Guess the US city: " + capitals[i]);
-			var city = capitals[i];
-			for ( j = 0 ; j < city.length; j++ ) {
-				//Here assign every letter of the city to a variable
-				var newvar = city.charAt(j);
-				var res = $("<p>");
-				res.text(newvar);
-			   	$("#demo").append(res);
-			   	//Here, write an underline _ for every letter of the city.
-				document.write(" _ ");
-				console.log(newvar);
-			}
-			
-		}
-
-//		document.write("(La palabra " + city + " tiene " + j + " letras.)");
-//		console.log(city);
-//		console.log(city.length);
-
-		//reading the city from the array one letter at the time
-		function myFunction() {
-		   	for (var l = 0; l < city.length; l++ ) {
-		   		var newvar = city.charAt(l);
-				var res = $("<p>"); 
-		   		res.text(newvar);
-		   		console.log(newvar);
-		   		$("#demo").append(newvar);
-
-			}
-		}
-		guessCity();
-}
-	</script>     
--->
-
+    <h3 id="guessLft">Number of guesses remaining:</h3>
+	<h3>Letters already guessed: <span><h1 id="yourG"></h1></span></h3>
 
 </body>
 </html>
